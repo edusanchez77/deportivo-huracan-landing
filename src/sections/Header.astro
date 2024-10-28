@@ -1,0 +1,171 @@
+---
+import { HEADER } from "@/const/header"
+import ArrowDown from "@/icons/arrow-down.astro"
+import Sun from "@/icons/sun.astro"
+import Moon from "@/icons/moon.astro"
+import LogoTienda from "@/icons/logo-tienda.astro"
+---
+<header id="landing-header" class="z-20 flex items-center justify-between w-full mx-auto px-20 bg-secondary">
+    <div class="flex flex-row items-center">
+        <a href="/#news">
+            <img class="h-14 w-auto" src="/src/icons/huracan.svg" alt="">
+        </a>
+        <!--<h2 class="mx-3 font-dosis font-extrabold text-xl text-primary uppercase">HURACÁN</h2> -->
+        <nav class="top-0 px-2 text-sm font-medium rounded-full text-blue-950 dark:text-gray-200 justify-start items-center">
+            <ul id="header-menu" class="flex items-center">
+                <!--
+                {
+                    HEADER.map((link) => (
+                        <li class="px-8 py-2">
+                            <a
+                                class="px-2 pb-2 text-xl font-dosis uppercase transition hover:border-b-2 hover:text-black dark:hover:text-black"
+                                aria-label={link.label}
+                                href={link.url}
+                            >
+                                {link.title}
+                            </a>
+                        </li>
+                    ))
+                }  
+                -->
+                <li class="px-3 h-full hover:text-black dark:hover:text-black">
+                    <a
+                        class="flex flex-row items-center px-2 py-6 h-full text-xl font-dosis uppercase overflow-hidden"
+                        aria-label=""
+                        href=""
+                    >
+                        el club <span> <ArrowDown class="h-6 w-auto ms-2" /> </span>
+                    </a>
+                    <ul class="flex flex-row gap-10">
+                        <li><span class="font-extrabold text-secondary">/ </span></span><a class="hover:text-secondary" href="/info">Datos</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/history">Historia</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/authorities">Autoridades</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/stadium">Estadio</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/properties">Sedes y predios</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="#">Títulos</a></li>
+                    </ul>
+                </li>
+                <li class="px-3">
+                    <a
+                        class="flex flex-row items-center px-2 py-6 text-xl font-dosis uppercase transition overflow-hidden hover:text-black dark:hover:text-black"
+                        aria-label=""
+                        href=""
+                    >
+                        fútbol <span> <ArrowDown class="h-6 w-auto ms-2" /> </span>
+                    </a>
+                    <ul class="flex flex-row gap-10">
+                        <li><span class="font-extrabold text-secondary">/ </span><a href="#">Noticias</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a href="/team">Plantel profesional</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a href="/fixture">Fixture</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a href="positions">Posiciones</a></li>
+                    </ul>
+                </li>
+                <li class="px-8 py-2">
+                    <a
+                        class="px-2 pb-2 text-xl font-dosis uppercase transition hover:text-black dark:hover:text-black"
+                        aria-label=""
+                        href=""
+                    >
+                        prensa
+                    </a>
+                </li>
+                <li class="px-3 py-2">
+                    <a
+                        class="px-2 pb-2 text-xl font-dosis uppercase transition hover:text-black dark:hover:text-black"
+                        aria-label=""
+                        href=""
+                    >
+                        social
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="flex items-center gap-5">
+        <nav class="top-0 text-sm font-medium rounded-full dark:text-gray-200 justify-start items-center">
+            <ul id="header-menu" class="flex items-center">
+                <li class="px-6 py-2 me-4 bg-button text-primary rounded-lg hover:bg-white hover:text-secondary">
+                    <a
+                        class="w-full text-xl font-dosis uppercase transition  dark:hover:text-secondary"
+                        aria-label=""
+                        href=""
+                    >
+                        tienda
+                        
+                    </a>
+                </li>
+                <li class="overflow-visible group my-auto bg-button text-white rounded-lg hover:bg-white hover:text-secondary transition">
+                    <a
+                        class="overflow-visible px-6 py-2 text-xl font-dosis uppercase transition flex flex-row items-center justify-between gap-5"
+                        aria-label=""
+                        href=""
+                    >
+                        <LogoTienda class="h-7 w-auto text-white transition duration-500 group-hover:scale-150 group-hover:text-secondary/80" />
+                        
+                        asociate
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <Moon class="text-white h-6 w-auto cursor-pointer" />
+    </div>
+</header>
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    header{
+        position: sticky;
+        top: 0px;
+        animation: adjust-header linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+    }
+
+    /* 
+    @keyframes adjust-header {
+        0% {
+            @apply dark:bg-gray-800/0 bg-white/0;
+        }
+        to {
+            @apply bg-secondary;
+        }
+    }
+    */
+
+    #header-menu li{
+        display: block;
+        overflow: hidden;
+    }
+
+    #header-menu ul{
+        display: none;
+        position: absolute; 
+        width: 100%;
+        left: 0;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    #header-menu li:hover ul {
+        display: block;
+        position: absolute;
+        background-color: #181818;
+        color: white;
+        top: 100%;
+        text-align: start;
+        height: auto;
+        padding: 30px 100px;
+        text-transform: uppercase;
+    }
+
+    #header-menu li ul li{
+        margin: 20px 0;
+    }
+
+
+</style>
+

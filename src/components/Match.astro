@@ -1,0 +1,46 @@
+---
+interface Props {
+	matchDay: string;
+	tournamentDates: string;
+    local: string;
+    visitor: string;
+    resLocal: string;
+	resVisitor: string;
+}
+
+const { matchDay, tournamentDates, local, visitor, resLocal, resVisitor } = Astro.props;
+---
+
+<section class="bg-white rounded-lg pt-4">
+    
+    <header class="flex flex-row justify-between text-xs font-extralight mb-7 px-4">
+        <div>
+            <h2>{matchDay}</h2>
+        </div>
+        <div>
+            <h2>{tournamentDates}</h2>
+        </div>
+    </header>
+
+    <main class="flex flex-row justify-center items-center gap-3">
+        <aside class="flex flex-col items-center">
+            <div>
+                <img class="h-12 w-auto" src="/src/icons/9-de-julio.png" alt="">
+            </div>
+            <div class="my-2 uppercase font-roboto">{local}</div>
+            <div class="py-2 px-4 bg-gray-400 rounded-md text-2xl font-roboto font-bold text-primary">{resLocal}</div>
+        </aside>
+        <h2 class="font-extrabold font-roboto text-3xl text-gray-500 mx-4">VS</h2>
+        <aside class="flex flex-col items-center">
+            <div>
+                <img class="h-12 w-auto" src="/src/icons/huracan.svg" alt="">
+            </div>
+            <div class="my-2 uppercase font-roboto">{visitor}</div>
+            <div class="py-2 px-4 bg-gray-400 rounded-md text-2xl font-roboto font-bold text-primary">{resVisitor}</div>
+        </aside>
+    </main>
+    
+    <footer class="text-xs font-light mt-4 pt-4 pb-4 px-4 bg-secondary/15 rounded-b-lg">
+        <h2>Rafael Rimonda (H)</h2>
+    </footer>
+</section>

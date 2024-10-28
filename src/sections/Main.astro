@@ -1,0 +1,61 @@
+---
+import Match from "@/components/Match.astro";
+import Card from "@/components/Card.astro";
+import News from "./News.astro";
+import Store from "@/sections/Store.astro";
+---
+<section class="flex flex-row my-10">
+    <div class="w-[75%] pe-3">
+        <!-- 
+        <Card 
+            title="Top Goleadores"
+            body=""
+            href="#"
+        />
+        <Card 
+            title="Top Entrenadores"
+            body=""
+            href="#"
+        />
+        <Card 
+            title="Top Tarjetas Amarillas"
+            body=""
+            href="#"
+        />
+        <Card 
+            title="Top Tarjetas Rojas"
+            body=""
+            href="#"
+        />
+        <Card 
+            title="Top Presencias"
+            body=""
+            href="#"
+        />
+        -->
+        <News />
+        
+
+    </div>
+    <div class="w-[25%]">
+        <h2 class="uppercase bg-secondary/80 p-3 text-primary rounded-lg mb-2 text-center">último partido</h2>
+        <Match
+            matchDay="Martes 08/10"    
+            tournamentDates="Fecha 11"
+            local="9 de julio"
+            visitor="huracán"
+            resLocal="0"
+            resVisitor="1"
+        />
+
+        <h2 class="uppercase bg-secondary/80 p-3 text-primary rounded-lg mt-10 mb-2 text-center">próximo partido</h2>
+        <Match
+            matchDay="Viernes 11/10"    
+            tournamentDates="Fecha 12"
+            local="Huracán"
+            visitor="At. Ascasubi"
+            resLocal=""
+            resVisitor=""
+        />
+    </div>
+</section>

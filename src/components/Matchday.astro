@@ -1,0 +1,766 @@
+---
+import Globo from "@/icons/club/globo.astro";
+import Nuevedejulio from "@/icons/club/nuevedejulio.astro"
+import Ascasubi from "@/icons/club/ascasubi.astro"
+
+interface Props {
+	matchDay?: string;
+	tournamentDates?: string;
+    local: string;
+    visitor: string;
+    resLocal: string;
+	resVisitor: string;
+}
+
+const { matchDay, tournamentDates, local, visitor, resLocal, resVisitor } = Astro.props;
+---
+
+<li class="border-t-2 py-3">
+    <div class="row lg:block sm:disp">
+        <div class="font-roboto col-lg-8 --col-xl-7 tt-7 text-muted text-center mb-2 mb-sm-3">
+            <strong class="d-inline mr-4">1ª fecha</strong>
+            <div class="d-none d-sm-inline mr-2">
+                <i class="icn-agenda mr-1 text-muted"></i>
+                <strong class="font-normal">20 de agosto de 2023</strong>
+            </div>
+            <div class="d-none d-sm-inline mr-2">
+                <i class="icn-info mr-1 text-muted"></i>
+                <strong class="font-normal">18:30 hs.</strong>
+            </div>
+            <div class="d-inline d-sm-none">
+                <a href="/futbol-profesional/fixture/liga-profesional-2023/fecha-1/lanus-sanlorenzo" class="btn btn-sm btn-mini p-0 text-left text-secondary">
+                    <span class="nxl-animar">Ficha</span>
+                    <span class="ml-2">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row font-oswald">
+        
+        <div class="flex justify-end items-center col-5 col-sm-4 col-lg-3 col-xl-4 text-right pl-0 uppercase nxl-equipo text-secondary/80 align-self-center">
+            <span class="nxl-equipo font-semibold text-xl mr-2 hidden d-md-inline-block texto-diag-1">{local}</span>
+            <abbr class="nxl-equipo font-semibold text-2xl mr-2 mt-1 d-inline-block d-md-none">hur</abbr>
+            <span class="nxl-escudo eq-lanus">
+                <Globo class="text-[#163856]"/>
+            </span>
+        </div>
+        
+        <div class="col-2 col-sm-2 col-xl-1 font-semibold nxl-vs nxl-resultado nxl-redondear-3 text-2xl text-center px-0 align-self-center">
+            <a href="/futbol-profesional/fixture/liga-profesional-2023/fecha-1/lanus-sanlorenzo">
+                <div class="bg-secondary/80 text-white texto-diag-3 d-inline-block px-2 py-1 max-sm:text-sm ">
+                    0
+                    <span class="mx-2 text-black text-xl pb-4">x</span>
+                    1
+                </div>
+            </a>
+        </div>
+        
+        <div class="flex justify-start items-center col-5 col-sm-3 col-md-4 col-lg-3 pr-0 uppercase nxl-equipo text-secondary/80 align-self-center">
+            <span class="nxl-escudo">
+                <Ascasubi class="text-[#163856] h-14 w-auto"/>
+                <!--<img src="//contenidos2.sanlorenzo.com.ar/cdn/svg/escudos/mono/sanlorenzo.svg" width="50" height="" class="img-fluid" alt="Escudo de San Lorenzo"> -->
+            </span>
+            <span class="nxl-equipo font-semibold text-xl ml-2 hidden d-md-inline-block texto-diag-1">9 de julio</span>
+            <abbr class="nxl-equipo font-semibold text-2xl ml-2 mt-1 d-inline-block d-md-none">nue</abbr>
+        </div>
+        
+        <div class="col-2 col-md-1 d-none d-sm-block d-lg-none text-right ">
+            <a href="/futbol-profesional/fixture/liga-profesional-2023/fecha-1/lanus-sanlorenzo" class="btn btn-sm btn-mini p-0 text-left text-secondary">
+                <span class="nxl-animar">Ficha</span>
+                <span class="ml-2">→</span>
+            </a>
+        </div>
+    
+        <div class="col-12 col-lg-3 --col-xl-4 text-center text-lg-left tt-7 text-muted mt-3 mt-lg-0">
+            <div class="d-inline d-lg-none mr-2 mx-lg-0">
+            <i class="icn-agenda mr-1 text-muted"></i>
+            <strong class="font-weight-normal">20 de agosto de 2023</strong>
+            </div>
+            <div class="d-inline d-lg-none mx-2 mx-lg-0">
+            <i class="icn-info mr-1 text-muted"></i>
+            <strong class="font-weight-normal">18:30 hs.</strong>
+            </div>
+        
+            <div class="d-inline d-lg-block mx-2 mx-lg-0">Estadio: Ciudad de Lanús</div>
+            <div class="d-inline d-lg-block mx-2 mx-lg-0"></div>
+        </div>
+    
+        <div class="d-none d-lg-block col-lg-1 text-right align-self-center">
+            <a href="/futbol-profesional/fixture/liga-profesional-2023/fecha-1/lanus-sanlorenzo" class="btn btn-sm btn-mini p-0 text-left text-secondary">
+                <span class="nxl-animar">Ficha</span>
+                <span class="ml-2">→</span>
+            </a>
+        </div>
+    </div>
+</li>
+
+<style>
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+    .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+    .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+    .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+    .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+    .col-xl-auto {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.col-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+}
+
+.col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+.col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+
+.col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+
+.col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+.col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+.col-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/*order*/
+
+@media (min-width: 576px) {
+    .col-sm {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-sm-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .col-sm-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+    .col-sm-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-sm-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-sm-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-sm-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-sm-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-sm-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-sm-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-sm-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-sm-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-sm-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-sm-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-md-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .col-md-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+    .col-md-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-md-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-md-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-md-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-md-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-md-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-lg-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .col-lg-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+    .col-lg-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-lg-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-lg-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-lg-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-lg-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-lg-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-lg-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-lg-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-lg-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-lg-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-lg-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-xl-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .col-xl-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+    .col-xl-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-xl-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-xl-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-xl-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-xl-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-xl-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-xl-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-xl-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-xl-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-xl-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-xl-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+    .tt-7 {
+        font-size: 0.8rem;
+    }
+
+    .text-muted {
+        color: #939daa !important;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .mb-sm-3,
+    .my-sm-3 {
+        margin-bottom: 1rem !important;
+    }
+
+    .d-inline {
+        display: inline !important;
+    }
+
+    .d-inline-block {
+        display: inline-block !important;
+    }
+
+    .d-none {
+        display: none !important;
+    }
+
+    .icn-agenda:before {
+        content: "\e90e";
+    }
+    
+    .icn-info:before {
+        content: "\e905";
+    }
+
+    .nxl-equipo {
+        transform: skew(-3deg, -1deg)
+    }
+
+    .nxl-escudo {
+        width:80px; height:auto
+    }
+
+    .align-self-center {
+        -ms-flex-item-align: center !important;
+        align-self: center !important;
+    }
+
+    .texto-diag-1 {
+        transform:skew(-1deg,-2deg)
+    }
+
+    .texto-diag-3 {
+        transform:skew(-3deg,-3deg)
+    }
+
+    .img-fluid, .nt-cuerpo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+@media (min-width: 576px) {
+    .d-sm-none {
+        display: none !important;
+    }
+    .d-sm-inline {
+        display: inline !important;
+    }
+    .d-sm-inline-block {
+        display: inline-block !important;
+    }
+    .d-sm-block {
+        display: block !important;
+    }
+    .d-sm-table {
+        display: table !important;
+    }
+    .d-sm-table-row {
+        display: table-row !important;
+    }
+    .d-sm-table-cell {
+        display: table-cell !important;
+    }
+    .d-sm-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+    .d-sm-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
+    .escudo-flexible {
+        width:32px
+    }
+    .nxl-escudo {
+        width:70px
+    }
+}
+
+@media (max-width: 767.98px) {
+    .nxl-equipos, .nxl-vs {font-size:1.75rem}
+    .nxl-visitante {font-size: 1.5rem;}
+}
+
+@media (min-width: 768px) {
+    .d-md-none {
+        display: none !important;
+    }
+    .d-md-inline {
+        display: inline !important;
+    }
+    .d-md-inline-block {
+        display: inline-block !important;
+    }
+    .d-md-block {
+        display: block !important;
+    }
+    .d-md-table {
+        display: table !important;
+    }
+    .d-md-table-row {
+        display: table-row !important;
+    }
+    .d-md-table-cell {
+        display: table-cell !important;
+    }
+    .d-md-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+    .d-md-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
+    .escudo-flexible {width:48px}
+    .nxl-escudo {width:52px}
+}
+
+@media (min-width: 992px) {
+    .d-lg-none {
+        display: none !important;
+    }
+    .d-lg-inline {
+        display: inline !important;
+    }
+    .d-lg-inline-block {
+        display: inline-block !important;
+    }
+    .d-lg-block {
+        display: block !important;
+    }
+    .d-lg-table {
+        display: table !important;
+    }
+    .d-lg-table-row {
+        display: table-row !important;
+    }
+    .d-lg-table-cell {
+        display: table-cell !important;
+    }
+    .d-lg-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+    .d-lg-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .d-xl-none {
+        display: none !important;
+    }
+    .d-xl-inline {
+        display: inline !important;
+    }
+    .d-xl-inline-block {
+        display: inline-block !important;
+    }
+    .d-xl-block {
+        display: block !important;
+    }
+    .d-xl-table {
+        display: table !important;
+    }
+    .d-xl-table-row {
+        display: table-row !important;
+    }
+    .d-xl-table-cell {
+        display: table-cell !important;
+    }
+    .d-xl-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+    .d-xl-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
+}
+
+@media (min-height: 576px) {
+    .d-vt-md-block {
+        display: block !important;
+    }
+}
+
+@media (min-height: 640px) {
+    .d-vt-lg-block {
+        display: block !important;
+    }
+}
+
+@media (min-height: 992px) {
+    .d-vt-xl-block {
+        display: block !important;
+    }
+}
+
+@media print {
+    .d-print-none {
+        display: none !important;
+    }
+    .d-print-inline {
+        display: inline !important;
+    }
+    .d-print-inline-block {
+        display: inline-block !important;
+    }
+    .d-print-block {
+        display: block !important;
+    }
+    .d-print-table {
+        display: table !important;
+    }
+    .d-print-table-row {
+        display: table-row !important;
+    }
+    .d-print-table-cell {
+        display: table-cell !important;
+    }
+    .d-print-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+    .d-print-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
+}
+
+
+</style>

@@ -1,0 +1,98 @@
+---
+interface Props {
+	imageUrl: string;
+	name: String;
+    lastName: String;
+    dorsal: number
+}
+
+const { imageUrl, name, lastName, dorsal } = Astro.props;
+---
+
+<article class="wrapper relative overflow-hidden h-96 w-auto rounded-sm hover:scale-105 transition cursor-pointer">
+    <div class="single-card">
+        <div class="front">
+            <img 
+                class="relative object-cover rounded-sm" 
+                src={imageUrl} 
+                alt="">
+        
+            <div class="absolute bottom-0 end-0 start-0 flex justify-between text-start bg-secondary rounded-b-sm">
+                <div class="m-2">
+                    <span class="font-dosis font-normal text-base capitalize">
+                        {name}
+                    </span>    
+                    <h2 class="font-dosis font-bold text-lg uppercase">
+                        {lastName}
+                    </h2>
+                </div>
+                <div class="me-2 p-3 bg-white">
+                    <h2 class="font-extrabold text-4xl font-oswald">
+                        {dorsal}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <div class="content font-oswald">
+                <h2>Puesto <span>Volante</span></h2>
+                <h2>Fecha de Nacimiento <span>16 de Agosto de 2005</span></h2>
+                <h2>Edad <span>19 años</span></h2>
+                <h2>Lugar de Nacimiento <span>Bahía Blanca, Buenos Aires</span></h2>
+                <h2>Altura <span>1.69 mts.</span></h2>
+                <h2>Peso <span>65 kgs.</span></h2>
+            </div>
+        </div>
+    </div>
+</article>
+
+<style>
+
+    .wrapper{
+        perspective: 900px;
+    }
+
+    .single-card{
+        transition: all .8s cubic-bezier(0.7, -.5, 0.3, 1.8);
+        transform-style: preserve-3d;
+    }
+
+    .wrapper:hover .single-card{
+        transform: rotateY(180deg);
+    }
+
+    .front, .back{
+        position: relative;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+    }
+
+    .front{
+        backface-visibility: hidden;
+    }
+
+    .back{
+        height: 100%;
+        background-color: red;
+        transform: rotateY(180deg);
+        position: absolute;
+        text-align: center;
+        right: 0;
+    }
+
+    .content{
+        padding-top: 30%;
+    }
+
+    .content h2{
+        color: white;
+        margin: auto;
+        font-weight: bold;
+    }
+
+    .content h2 span{
+        font-weight: lighter;
+    }
+
+</style>

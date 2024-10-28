@@ -1,0 +1,57 @@
+---
+import '@fontsource-variable/dosis';
+
+import InstagramIcon from '@/icons/instagram.astro';
+import XIcon from '@/icons/x.astro';
+import GithubIcon from '@/icons/github.astro';
+---
+
+<footer 
+    class="pt-5 w-full flex flex-col justify-center items-center bg-white
+            md:flex-col md:justify-center"
+>
+    <span class="text-md text-black font-oswald font-light">
+        © 2024 <span class="text-secondary/80 font-extrabold mx-2">
+            <span></span>
+            <a href="#">NERDEV</a>
+        </span>| Todos los derechos reservados
+    </span>
+    <ul class="flex flex-row gap-x-3 items-center">
+        <li>
+            <a
+                target="_blank"
+                rel="noopener"
+                href="#"
+                class="hover:scale-125 hover:opacity-75 transition inline-block"
+            >
+                <InstagramIcon 
+                    class="h-6 w-auto text-secondary/80"
+                />
+            </a>
+        </li>
+        <li>
+            <a
+                target="_blank"
+                rel="noopener"
+                href="#"
+                class="hover:scale-125 hover:opacity-75 transition inline-block"
+            >
+            <XIcon 
+                class="h-6 w-auto text-secondary/80"
+            />
+            </a>
+        </li>
+        <li>
+            <a
+                target="_blank"
+                rel="noopener"
+                href="#"
+                class="hover:scale-125 hover:opacity-75 transition inline-block"
+            >
+            <GithubIcon 
+                class="h-5 w-auto text-secondary/80"
+            />
+            </a>
+        </li>
+    </ul>
+</footer>

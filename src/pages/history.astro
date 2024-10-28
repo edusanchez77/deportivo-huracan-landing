@@ -1,0 +1,30 @@
+---
+import LayoutPages from "@/layouts/LayoutPages.astro"
+import Article from "@/components/Article.astro"
+import { HISTORY } from "@/const/history"
+---
+
+<LayoutPages title="Historia">
+    <section>
+        {
+            HISTORY.map((link) =>(
+                <Article
+                    title={link.title}
+                    body={link.body}
+                >
+                    {
+                        link.image.name != "" &&
+                    <img 
+                        slot="before" 
+                        class="float-left m-3"
+                        src={`/public/img/history/${link.image.name}.jpg`} 
+                        width={link.image.width}
+						loading="lazy"
+						height={link.image.height}
+                        alt="">
+                    }
+                </Article>
+            ))
+        }
+    </section>
+</LayoutPages>

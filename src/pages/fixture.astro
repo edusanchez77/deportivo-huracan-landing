@@ -1,0 +1,31 @@
+---
+import LayoutPages from "@/layouts/LayoutPages.astro";
+import Matchday from "@/components/Matchday.astro"
+---
+
+<LayoutPages title="Fixture">
+    <section>
+        <div class="mb-10">
+            <h2 class="font-bold text-xl my-2">
+                Fixture 2024
+            </h2>
+            <div>
+                <ul>
+                    <Matchday
+                        local="Huracán"
+                        visitor="9 de Julio"
+                        resLocal="0"
+                        resVisitor="1"
+                    />
+
+                    <Matchday
+                        local="Atlético Ascasubi"
+                        visitor="Huracán"
+                        resLocal="1"
+                        resVisitor="2"
+                    />
+                </ul>
+            </div>
+        </div>
+    </section>
+</LayoutPages>

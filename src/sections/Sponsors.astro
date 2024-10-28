@@ -1,0 +1,77 @@
+---
+import { SPONSORS } from "@/const/sponsors"
+---
+<section class="max-w-7xl mx-auto my-20">
+    <h2 class="text-center font-extrabold text-4xl font-oswald">
+        Nos acompañan
+    </h2>
+    <div class="mt-12 mb-40 grid select-none lg:grid-cols-4 gap-2 md:gap-8 md:grid-cols-2 md:mx-4 sm:grid-cols-1 max-sm:mx-2">
+        {
+			SPONSORS.filter(({ id }) => id !== "infojobs").map(({ id, name, url, image }) => (
+				<a
+					class="company-link group relative flex h-24 items-center justify-center overflow-hidden md:h-32"
+					title={`Visita la página del patrocinador ${name}`}
+					href={url}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={`Link con el logo de ${name} que lleva a ${url}`}
+				>	
+					<img
+						src={`https://cdn.lavelada.dev/sponsors/${image.name ?? id}.svg`}
+						width={image.width}
+						loading="lazy"
+						height={image.height}
+						fetchpriority="low"
+						alt={`Logo de ${name}`}
+						class="company-logo px-5 text-white transition group-hover:scale-110 group-focus:scale-110 md:px-4"
+					/>
+				</a>
+			))
+		}
+    </div>
+</section>
+
+<style>
+	.company-link {
+		background: linear-gradient(to bottom, rgba(107, 107, 107, 0.308) 0%, transparent 100%);
+		transition: all 0.5s ease;
+	}
+
+	.company-link::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		display: block;
+		background: linear-gradient(to bottom, rgba(230, 31, 31, 0.2) 0%, transparent);
+		opacity: 0;
+		height: 50%;
+		transition:
+			opacity 0.2s ease-in-out,
+			height 0.2s ease-in-out;
+	}
+
+	@media (prefers-reduced-motion) {
+		.company-link::before {
+			transition: none;
+		}
+	}
+
+	.company-link:hover::before,
+	.company-link:focus::before {
+		opacity: 0.8;
+		height: 90%;
+		box-shadow: 0 -4px 3px rgba(105, 24, 24, 0.75);
+	}
+
+	.company-link:hover .company-logo,
+	.company-link:focus .company-logo {
+		transform: scale(1.1);
+	}
+
+	@media (prefers-reduced-motion) {
+		.company-link:hover .company-logo,
+		.company-link:focus .company-logo {
+			transform: scale(1);
+		}
+	}
+</style>

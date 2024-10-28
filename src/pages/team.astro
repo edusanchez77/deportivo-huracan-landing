@@ -1,0 +1,30 @@
+---
+import LayoutPages from "@/layouts/LayoutPages.astro";
+import Player from "@/components/Player.astro"
+import { PLAYERS } from "@/const/players"
+---
+
+<LayoutPages title="Plantel Profesional">
+    <section>
+        <h2 class="font-bold text-xl my-2">
+            Plantel Profesional
+        </h2>
+        <div class="text-justify">
+            <h2>
+                Arqueros
+            </h2>
+            <div class="grid grid-cols-4 gap-3 my-5">
+                {
+                    PLAYERS.map((link) => (
+                        <Player
+                            imageUrl = "/public/img/player/player.jpg"
+                            name = {link.name}
+                            lastName = {link.lastName}
+                            dorsal = {link.dorsal}
+                        />
+                    ))
+                }                
+            </div>
+        </div>
+    </section>
+</LayoutPages>
