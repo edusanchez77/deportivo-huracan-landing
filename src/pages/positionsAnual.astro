@@ -10,14 +10,14 @@ import { TEAMS } from "@/const/teams"
             <h1 class="font-bold font-dosis uppercase text-2xl mb-2">
                 Posiciones
             </h1>
-            <div class="font-semibold font-dosis uppercase text-base mb-4 flex div-title">
-                <h2 class="text-secondary border-b-2 border-black relative">
-                    Clausura 2024
-                </h2>
-                <h2 class="ms-8 text-gray-400 cursor-pointer trans-border relative div-menu">
-                    <a href="positionsAnual">
-                        Tabla anual
+            <div class="text-gray-400 font-semibold font-dosis uppercase text-base mb-4 flex div-title">
+                <h2 class=" relative div-menu">
+                    <a href="positions">
+                        Clausura 2024
                     </a>
+                </h2>
+                <h2 class="ms-8  text-secondary border-b-2 border-black relative ">
+                    Tabla anual
                 </h2>
             </div>
             <div>
@@ -38,11 +38,15 @@ import { TEAMS } from "@/const/teams"
                     </thead>
                     <tbody class="border-[1px] border-gray-300">
                         {
-                            TEAMS.sort((a, b) => ((b.won*3)+b.tied) - ((a.won*3)+a.tied))
-                                .sort((a, b) => ((b.goalsInFavor-b.goalsAgainst) - (a.goalsInFavor-a.goalsAgainst)))
+                            TEAMS.sort((a, b) => ((a.won*3)+a.tied) - ((b.won*3)+b.tied))
+                                .sort((a, b) => ((a.goalsInFavor-a.goalsAgainst) - (b.goalsInFavor-b.goalsAgainst)))
                                 .map((link, index) => (
                                 <tr>
-                                    <td>{index+1}</td>
+                                    <td>
+                                        <p class="border-r-4 border-blue-400">
+                                            {index+1}
+                                        </p>
+                                    </td>
                                     <td class="text-start uppercase">{link.name}</td>
                                     <td>{(link.won*3)+(link.tied)}</td>
                                     <td>{link.games}</td>

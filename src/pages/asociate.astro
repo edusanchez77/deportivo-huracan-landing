@@ -1,0 +1,131 @@
+---
+import LogoTienda from "@/icons/logo-tienda.astro";
+import LayoutPages from "@/layouts/LayoutPages.astro";
+---
+
+<LayoutPages title="Autoridades">
+    <section>
+        <div class="mb-10">
+            <div>
+                <h2 class="font-bold font-dosis uppercase text-2xl">
+                    Asociate
+                </h2>
+                <p class="font-semibold font-dosis uppercase text-base mb-4 flex div-title text-secondary">
+                    El club que queremos lo hacemos con vos
+                </p>
+            </div>
+            <div class="flex gap-5">
+
+                <article class="w-80 border-2 border-gray-300 rounded-xl text-center font-dosis">
+                    
+                    <div class="h-full ">
+                        <header class="relative">
+                            <img 
+                                class="rounded-t-lg"
+                                src="/public/img/club/fans.jpg" 
+                                alt="Foto de la hinchada del Club Deportivo Huracán de Tancacha">
+                            <div class="w-full h-full absolute top-0 mt-5">
+                                <LogoTienda 
+                                    class="text-primary h-20 w-auto mx-auto my-auto" />
+                                <p class="font-dosis text-primary mx-auto uppercase mt-2">
+                                    El club que queremos, <br> lo hacemos con vos
+                                </p>
+                            </div>
+                        </header>
+    
+                        <div class="px-4">
+                            <header>
+                                <h1 class="font-bold text-2xl uppercase my-3">Socia/o Simple</h1>
+                                <h2 class="font-semibold text-xl uppercase text-secondary">$20.000 /mes (*)</h2>
+                                <span class="font-light text-sm">Cadete e infantil: <span class="font-semibold">$17.000 /mes</span>.</span>
+                            </header>
+                            <section class="my-8 text-start">
+                                <ul>
+                                    <li class="mb-1 mx-4"> Acceso a la popular sin cargo en torneos AFA en los partidos como local, realizando canje (sujeto a disponibilidad y para socios/as con al menos 1 año de antigüedad).</li>
+                                    <li class="mb-1 mx-4"> Múltiples actividades deportivas y recreativas exclusivas para categoría plena/pleno, abonando un arancel preferencial según cada actividad.</li>
+                                    <li class="mb-1 mx-4"> Compra de abonos de plateas, con tarifa para socios/as, que permite asegurar un lugar en el estadio todos los partidos.</li>
+                                    <li class="mb-1 mx-4"> Compra de abonos para el Pando, que permite ver todas las disciplinas que juegan en el polideportivo.</li>
+                                    <li class="mb-1 mx-4"> Acceso a “Un Ciclón de Beneficios”.</li>
+                                    <li class="mb-1 mx-4"> Inscripción en participación por sorteos para experiencias de socios/as</li>
+                                </ul>
+                            </section>
+                            <footer class="boton-asociate">
+                                <button class="border-2 border-button bg-button py-2 px-8 rounded-full text-primary font-normal uppercase hover:bg-primary hover:text-secondary hover:font-bold">
+                                    Asociate <span class="ml-2 font-extrabold"> → </span>
+                                </button>
+                                <span class="font-light text-xs mt-2">
+                                    (*) Valor para mayores de 18 años
+                                </span>
+                            </footer>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="w-80 border-2 border-gray-300 rounded-xl text-center font-dosis">
+
+                    <div class="h-full">
+                        <header class="relative">
+                            <img 
+                                class="rounded-t-lg"
+                                src="/public/img/club/fans.jpg" 
+                                alt="Foto de la hinchada del Club Deportivo Huracán de Tancacha">
+                            <div class="w-full h-full absolute top-0 mt-5">
+                                <LogoTienda 
+                                    class="text-primary h-20 w-auto mx-auto my-auto" />
+                                <p class="font-dosis text-primary mx-auto uppercase mt-2">
+                                    El club que queremos, <br> lo hacemos con vos
+                                </p>
+                            </div>
+                        </header>
+    
+                        <div class="px-4">
+                            <header>
+                                <h1 class="font-bold text-2xl uppercase my-3">Socia/o Plena/o</h1>
+                                <h2 class="font-semibold text-xl uppercase text-secondary">$22.000 /mes (*)</h2>
+                                <span class="font-light text-sm">Cadete e infantil: <span class="font-semibold">$18.000 /mes</span>.</span>
+                            </header>
+                            <section class="my-8 text-start">
+                                <ul>
+                                    <li class="mb-1 mx-4"> Acceso a la popular sin cargo en torneos AFA en los partidos como local, realizando canje (sujeto a disponibilidad y para socios/as con al menos 1 año de antigüedad).</li>
+                                    <li class="mb-1 mx-4"> Múltiples actividades deportivas y recreativas exclusivas para categoría plena/pleno, abonando un arancel preferencial según cada actividad.</li>
+                                    <li class="mb-1 mx-4"> Compra de abonos de plateas, con tarifa para socios/as, que permite asegurar un lugar en el estadio todos los partidos.</li>
+                                    <li class="mb-1 mx-4"> Compra de abonos para el Pando, que permite ver todas las disciplinas que juegan en el polideportivo.</li>
+                                    <li class="mb-1 mx-4"> Acceso a “Un Ciclón de Beneficios”.</li>
+                                    <li class="mb-1 mx-4"> Inscripción en participación por sorteos para experiencias de socios/as</li>
+                                </ul>
+                            </section>
+                            <footer class="boton-asociate">
+                                <button class="border-2 border-button bg-button py-2 px-8 rounded-full text-primary font-normal uppercase hover:bg-primary hover:text-secondary hover:font-bold">
+                                    Asociate <span class="ml-2 font-extrabold"> → </span>
+                                </button>
+                                <span class="font-light text-xs mt-2">
+                                    (*) Valor para mayores de 18 años
+                                </span>
+                            </footer>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </section>
+</LayoutPages>
+
+<style>
+    ul li::before {
+        content: '\2022';
+        font-size: 2rem;
+        color: red;
+        padding-right: 8px;
+    }
+
+    .boton-asociate{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-top: auto !important;
+        margin-bottom: 1rem !important;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+</style>
