@@ -43,9 +43,24 @@ import { TEAMS } from "@/const/teams"
                                 .map((link, index) => (
                                 <tr>
                                     <td>
-                                        <p class="border-r-4 border-blue-400">
-                                            {index+1}
-                                        </p>
+                                        {
+                                            index == 2 &&
+                                            <p class="border-r-4 border-yellow-400">
+                                                {index+1}
+                                            </p>
+                                        }
+                                        {
+                                            index > 2 &&
+                                            <p class="border-r-4 border-red-600">
+                                                {index+1}
+                                            </p>
+                                        }
+                                        {
+                                            index < 2 &&
+                                            <p class="border-r-4 border-primary">
+                                                {index+1}
+                                            </p>
+                                        }
                                     </td>
                                     <td class="text-start uppercase">{link.name}</td>
                                     <td>{(link.won*3)+(link.tied)}</td>
@@ -63,6 +78,14 @@ import { TEAMS } from "@/const/teams"
                     </tbody>
                 </table>
             </div>
+            <footer>
+                <p class="mt-6 px-2 border-l-4 border-x-red-600">
+                    Los últimos 2 puestos de la tabla anual, descienden directamente.
+                </p>
+                <p class="mt-2 px-2 border-l-4 border-yellow-400">
+                    El puesto 14, jugará la promoción para mantener la categoría.
+                </p>
+            </footer>
         </div>
     </section>
 </LayoutPages>

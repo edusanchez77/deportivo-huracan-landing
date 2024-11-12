@@ -41,8 +41,28 @@ import { TEAMS } from "@/const/teams"
                             TEAMS.sort((a, b) => ((b.won*3)+b.tied) - ((a.won*3)+a.tied))
                                 .sort((a, b) => ((b.goalsInFavor-b.goalsAgainst) - (a.goalsInFavor-a.goalsAgainst)))
                                 .map((link, index) => (
+                                
                                 <tr>
-                                    <td>{index+1}</td>
+                                    <td>
+                                        {
+                                            index == 0 &&
+                                            <p class="border-r-4 border-green-600">
+                                                {index+1}
+                                            </p>
+                                        }
+                                        {
+                                            index > 0 && index < 3 &&
+                                            <p class="border-r-4 border-blue-500">
+                                                {index+1}
+                                            </p>
+                                        }
+                                        {
+                                            index >= 3 &&
+                                            <p class="border-r-4 border-primary">
+                                                {index+1}
+                                            </p>
+                                        }
+                                    </td>
                                     <td class="text-start uppercase">{link.name}</td>
                                     <td>{(link.won*3)+(link.tied)}</td>
                                     <td>{link.games}</td>
@@ -53,12 +73,21 @@ import { TEAMS } from "@/const/teams"
                                     <td>{link.goalsAgainst}</td>
                                     <td>{link.goalsInFavor - link.goalsAgainst}</td>
                                 </tr>
+                                
                             ))
                         }
                         
                     </tbody>
                 </table>
             </div>
+            <footer>
+                <p class="mt-6 px-2 border-l-4 border-red-500">
+                    El primero de la tabla clasifica directamente a semifinales.
+                </p>
+                <p class="mt-2 px-2 border-l-4 border-blue-500">
+                    Del puesto 2 al 7 juegan un repechaje a partido único por 3 lugares en las semifinales.
+                </p>
+            </footer>
         </div>
     </section>
 </LayoutPages>
