@@ -1,0 +1,16 @@
+---
+import Trofeo from "@/icons/trophy.astro"
+
+interface Props {
+	tournament: string;
+	date: string;
+}
+
+const { tournament, date } = Astro.props;
+---
+
+<article>
+    <Trofeo class="text-gray-500 h-36 w-auto"/>
+    <h2 class="uppercase text-2xl text-secondary">{tournament}</h2>
+    <span class="text-xl">{date}</span>
+</article>

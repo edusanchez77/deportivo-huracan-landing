@@ -37,15 +37,15 @@ import LogoTienda from "@/icons/logo-tienda.astro"
                         el club <span> <ArrowDown class="h-6 w-auto ms-2" /> </span>
                     </a>
                     <ul class="flex flex-row gap-10">
-                        <li><span class="font-extrabold text-secondary">/ </span></span><a class="hover:text-secondary" href="/info">Datos</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/info">Datos</a></li>
                         <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/history">Historia</a></li>
                         <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/authorities">Autoridades</a></li>
                         <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/stadium">Estadio</a></li>
                         <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/properties">Sedes y predios</a></li>
-                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="#">Títulos</a></li>
+                        <li><span class="font-extrabold text-secondary">/ </span><a class="hover:text-secondary" href="/titles">Títulos</a></li>
                     </ul>
                 </li>
-                <li class="px-3">
+                <li class="px-3 flex flex-row">
                     <a
                         class="flex flex-row items-center px-2 py-6 text-xl font-dosis uppercase transition overflow-hidden hover:text-black dark:hover:text-black"
                         aria-label=""
@@ -53,20 +53,29 @@ import LogoTienda from "@/icons/logo-tienda.astro"
                     >
                         fútbol <span> <ArrowDown class="h-6 w-auto ms-2" /> </span>
                     </a>
-                    <ul class="flex flex-row gap-10">
-                        <li><span class="font-extrabold text-secondary">/ </span><a href="#">Noticias</a></li>
-                        <li><span class="font-extrabold text-secondary">/ </span><a href="/team">Plantel profesional</a></li>
-                        <li><span class="font-extrabold text-secondary">/ </span><a href="/fixture">Fixture</a></li>
-                        <li><span class="font-extrabold text-secondary">/ </span><a href="/positions">Posiciones</a></li>
+                    <ul class="gap-10">
+                        <div class="flex flex-row gap-32">
+                            <div>
+                                <li><span class="font-extrabold text-secondary">/ </span><a href="/team">Plantel profesional</a></li>
+                                <li><span class="font-extrabold text-secondary">/ </span><a href="/fixture">Fixture</a></li>
+                                <li><span class="font-extrabold text-secondary">/ </span><a href="/positions">Posiciones</a></li>
+                            </div>
+                            <div>
+                                <li><span class="font-extrabold text-secondary">/ </span><a href="/team">Reserva</a></li>
+                                <li><span class="font-extrabold text-secondary">/ </span><a href="/fixture">Senior</a></li>
+                                <li><span class="font-extrabold text-secondary">/ </span><a href="/positions">Infantiles</a></li>
+                            </div>
+                        </div>
                     </ul>
+
                 </li>
                 <li class="px-8 py-2">
                     <a
                         class="px-2 pb-2 text-xl font-dosis uppercase transition hover:text-black dark:hover:text-black"
                         aria-label=""
-                        href=""
+                        href="/news"
                     >
-                        prensa
+                        noticias
                     </a>
                 </li>
                 <li class="px-3 py-2">
@@ -89,7 +98,7 @@ import LogoTienda from "@/icons/logo-tienda.astro"
                     <a
                         class="w-full text-xl font-dosis uppercase transition  dark:hover:text-secondary"
                         aria-label=""
-                        href=""
+                        href="/store"
                     >
                         tienda
                         

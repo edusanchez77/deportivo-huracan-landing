@@ -1,0 +1,32 @@
+---
+import LayoutPages from "@/layouts/LayoutPages.astro";
+import New from "@/components/News.astro"
+---
+
+<LayoutPages title="Noticias">
+    <section class="font-dosis mb-10">
+        <header>
+            <h2 class="font-bold text-5xl my-2 uppercase">
+                Noticias
+            </h2>
+        </header>
+        <div class="grid grid-cols-3 gap-10 mt-4">
+            
+            <New
+                img="/public/img/news/noticia-uno.jpg"
+                title="Ganó el Senior"
+                body="07 de noviembre de 2024"/>
+
+            <New
+                img="/public/img/news/noticia-dos.jpg"
+                title="Nuevo dt"
+                body="05 de noviembre de 2024"/>
+
+            <New
+                img="/public/img/news/comunicado-oficial.webp"
+                title="Comunicado"
+                body="31 de octubre de 2024"/>
+            
+        </div>
+    </section>
+</LayoutPages>

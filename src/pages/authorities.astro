@@ -3,31 +3,35 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 ---
 
 <LayoutPages title="Autoridades">
-    <section>
-        <div class="mb-10">
-            <h2 class="font-bold text-xl my-2">
-                Autoridades
-            </h2>
-            <div>
-                <p>Presidente: Ezequiel Vottero</p>
-                <p>Vicepresidente: Santiago Segura</p>
-                <p>Secretaria: Carolina Bergia</p>
-                <p>Pro Secretaria: Honorina Lubrina</p>
-                <p>Tesorero: Luciano Matellica</p>
-                <p>Pro Tesorera: Alba Aquino</p>
-                <p>1er Vocal titular: Nicolas Giordano</p>
-                <p>2do Vocal titular: Pablo Ramos</p>
-                <p>3er Vocal titular: Silvia Fernandez</p>
-                <p>4to Vocal titular: Vanina Galante</p>
-                <p>1er Vocal suplente: Diego Dominguez</p>
-                <p>2do Vocal suplente: Franco Bordese</p>
-                <p>3er Vocal suplente: Mauricio Baigorria</p>
-                <p>4to Vocal suplente: Mariela Carinci</p>
-                <p>1er Revisor de cuenta: Maximiliano Gonzalez</p>
-                <p>2do Revisor de cuenta: Sonia Monti</p>
-                <p>3er Revisor de cuenta: Mario Rodriguez</p>
-                <p>1er Revisor suplente: Carina Paez</p>
-            </div>
+    <section class="mb-10 font-dosis">
+        <h2 class="font-bold text-5xl my-2 uppercase">
+            Autoridades
+        </h2>
+        <div class="text-lg">
+            <p><span class="sub-title">Presidente:</span> Ezequiel Vottero</p>
+            <p><span class="sub-title">Vicepresidente:</span> Santiago Segura</p>
+            <p><span class="sub-title">Secretaria:</span> Carolina Bergia</p>
+            <p><span class="sub-title">Pro Secretaria:</span> Honorina Lubrina</p>
+            <p><span class="sub-title">Tesorero:</span> Luciano Matellica</p>
+            <p><span class="sub-title">Pro Tesorera:</span> Alba Aquino</p>
+            <p><span class="sub-title">1er Vocal titular:</span> Nicolas Giordano</p>
+            <p><span class="sub-title">2do Vocal titular:</span> Pablo Ramos</p>
+            <p><span class="sub-title">3er Vocal titular:</span> Silvia Fernandez</p>
+            <p><span class="sub-title">4to Vocal titular:</span> Vanina Galante</p>
+            <p><span class="sub-title">1er Vocal suplente:</span> Diego Dominguez</p>
+            <p><span class="sub-title">2do Vocal suplente:</span> Franco Bordese</p>
+            <p><span class="sub-title">3er Vocal suplente:</span> Mauricio Baigorria</p>
+            <p><span class="sub-title">4to Vocal suplente:</span> Mariela Carinci</p>
+            <p><span class="sub-title">1er Revisor de cuenta:</span> Maximiliano Gonzalez</p>
+            <p><span class="sub-title">2do Revisor de cuenta:</span> Sonia Monti</p>
+            <p><span class="sub-title">3er Revisor de cuenta:</span> Mario Rodriguez</p>
+            <p><span class="sub-title">1er Revisor suplente:</span> Carina Paez</p>
         </div>
     </section>
 </LayoutPages>
+
+<style>
+    .sub-title{
+        font-weight: 600;
+    }
+</style>

@@ -6,10 +6,10 @@ interface Props {
 
 const { title, body } = Astro.props;
 ---
-<article class="my-16">
+<article class="mb-16">
     <slot name="before"/>
     <section>
-        <h2 class="font-extrabold text-3xl">
+        <h2 class="font-semibold text-3xl uppercase">
             {title}
         </h2>
         <p class="text-base text-justify">

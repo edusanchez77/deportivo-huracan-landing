@@ -3,20 +3,20 @@ import LogoTienda from "@/icons/logo-tienda.astro";
 import LayoutPages from "@/layouts/LayoutPages.astro";
 ---
 
-<LayoutPages title="Autoridades">
-    <section>
-        <div class="mb-10">
-            <div>
-                <h2 class="font-bold font-dosis uppercase text-2xl">
+<LayoutPages title="Asociate">
+    <section class="mb-10 font-dosis">
+        <div>
+            <header>
+                <h2 class="font-bold text-5xl my-2 uppercase">
                     Asociate
                 </h2>
-                <p class="font-semibold font-dosis uppercase text-base mb-4 flex div-title text-secondary">
+                <p class="font-semibold font-dosis uppercase text-2xl mb-4 flex div-title text-secondary">
                     El club que queremos lo hacemos con vos
                 </p>
-            </div>
-            <div class="flex gap-5">
+            </header>
+            <div class="flex gap-12">
 
-                <article class="w-80 border-2 border-gray-300 rounded-xl text-center font-dosis">
+                <article class="w-96 border-2 border-gray-300 rounded-xl text-center font-dosis">
                     
                     <div class="h-full ">
                         <header class="relative">
@@ -50,9 +50,11 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
                                 </ul>
                             </section>
                             <footer class="boton-asociate">
-                                <button class="border-2 border-button bg-button py-2 px-8 rounded-full text-primary font-normal uppercase hover:bg-primary hover:text-secondary hover:font-bold">
-                                    Asociate <span class="ml-2 font-extrabold"> → </span>
-                                </button>
+                                <a href="">
+                                    <button class="border-2 border-button bg-button py-2 px-8 rounded-full text-primary font-normal uppercase hover:bg-primary hover:text-secondary hover:font-bold">
+                                        Asociate <span class="ml-2 font-extrabold"> → </span>
+                                    </button>
+                                </a>
                                 <span class="font-light text-xs mt-2">
                                     (*) Valor para mayores de 18 años
                                 </span>
@@ -62,7 +64,7 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 
                 </article>
 
-                <article class="w-80 border-2 border-gray-300 rounded-xl text-center font-dosis">
+                <article class="w-96 border-2 border-gray-300 rounded-xl text-center font-dosis">
 
                     <div class="h-full">
                         <header class="relative">
@@ -96,11 +98,13 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
                                 </ul>
                             </section>
                             <footer class="boton-asociate">
-                                <button class="border-2 border-button bg-button py-2 px-8 rounded-full text-primary font-normal uppercase hover:bg-primary hover:text-secondary hover:font-bold">
-                                    Asociate <span class="ml-2 font-extrabold"> → </span>
-                                </button>
+                                <a href="asociate-form">
+                                    <button class="border-2 border-button bg-button py-2 px-8 rounded-full text-primary font-normal uppercase hover:bg-primary hover:text-secondary hover:font-bold">
+                                        Asociate <span class="ml-2 font-extrabold"> → </span>
+                                    </button>
+                                </a>
                                 <span class="font-light text-xs mt-2">
-                                    (*) Valor para mayores de 18 años
+                                    (*) Valor para mayores de 18 años 
                                 </span>
                             </footer>
                         </div>

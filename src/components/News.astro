@@ -1,0 +1,28 @@
+---
+interface Props {
+    img: string;
+	title: string;
+	body: string;
+}
+
+const { img, title, body } = Astro.props;
+---
+
+<article class="rounded-xl bg-white shadow-2xl shadow-gray-400 cursor-pointer hover:-translate-y-1.5 transition inline-block">
+    <header class="h-80 w-auto overflow-hidden">
+        <img
+            class="h-full w-full object-cover rounded-t-lg" 
+            src={img} 
+            alt="Noticia del Club Deportivo Huracán de Tancacha">
+    </header>
+    <div>
+        <h2 class="font-bold text-lg uppercase mx-4 my-2">
+            {title}
+        </h2>
+    </div>
+    <footer>
+        <p class="text-sm mx-4 my-2">
+            {body}
+        </p>
+    </footer>
+</article>

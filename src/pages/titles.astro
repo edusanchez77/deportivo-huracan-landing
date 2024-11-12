@@ -1,0 +1,64 @@
+---
+import LayoutPages from "@/layouts/LayoutPages.astro";
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import Title from "@/components/Title.astro";
+
+import { TITLES } from "@/const/titles";
+---
+
+<LayoutPages title="Títulos">
+    <section class="mb-10 font-dosis">
+        <header>
+            <h2 class="font-bold uppercase text-5xl mb-2">
+                Títulos
+            </h2>
+        </header>
+        <body>
+            <div>
+                <h2 class="uppercase text-2xl text-gray-700 font-semibold">Primera División</h2>
+                <div class="grid grid-cols-5 gap-14">
+
+                    {
+                        TITLES
+                        .map((link) =>(
+                            
+                            link.division == 1 &&
+                            <Title
+                                tournament={link.tournament}
+                                date={link.date} />
+
+                        ))
+                    }
+                    
+                </div>
+            </div>
+            <div class="mt-20">
+                <h2 class="uppercase text-2xl text-gray-700 font-semibold">Segunda División</h2>
+                <div class="grid grid-cols-5 gap-14">
+
+                    {
+                        TITLES
+                        .map((link) =>(
+                            
+                            link.division == 2 &&
+                            <Title
+                                tournament={link.tournament}
+                                date={link.date} />
+
+                        ))
+                    }
+                    
+                </div>
+            </div>
+        </body>
+    </section>
+</LayoutPages>
+
+
+<style>
+    .icn-copa::before {
+        content: "\f086";
+        font-family: "Font Awesome 5 Free"
+    }
+
+</style>

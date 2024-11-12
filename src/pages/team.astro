@@ -5,25 +5,82 @@ import { PLAYERS } from "@/const/players"
 ---
 
 <LayoutPages title="Plantel Profesional">
-    <section>
-        <h2 class="font-bold text-xl my-2">
+    <section class="mb-10 font-dosis">
+        <h2 class="font-bold text-5xl my-2 uppercase">
             Plantel Profesional
         </h2>
         <div class="text-justify">
-            <h2>
-                Arqueros
-            </h2>
-            <div class="grid grid-cols-4 gap-3 my-5">
-                {
-                    PLAYERS.map((link) => (
-                        <Player
-                            imageUrl = "/public/img/player/player.jpg"
-                            name = {link.name}
-                            lastName = {link.lastName}
-                            dorsal = {link.dorsal}
-                        />
-                    ))
-                }                
+            <div>
+                <h2 class="uppercase text-2xl text-gray-700 font-semibold">
+                    Arqueros
+                </h2>
+                <div class="grid grid-cols-4 gap-3 my-5">
+                    {
+                        PLAYERS.map((link) => (
+                            link.position == 'arquero' &&
+                            <Player
+                                imageUrl = "/public/img/player/player.jpg"
+                                name = {link.name}
+                                lastName = {link.lastName}
+                                dorsal = {link.dorsal}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+            <div>
+                <h2 class="uppercase text-2xl text-gray-700 font-semibold mt-10">
+                    Defensores
+                </h2>
+                <div class="grid grid-cols-4 gap-3 my-5">
+                    {
+                        PLAYERS.map((link) => (
+                            link.position == 'defensor' &&
+                            <Player
+                                imageUrl = "/public/img/player/player.jpg"
+                                name = {link.name}
+                                lastName = {link.lastName}
+                                dorsal = {link.dorsal}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+            <div>
+                <h2 class="uppercase text-2xl text-gray-700 font-semibold mt-10">
+                    Volantes
+                </h2>
+                <div class="grid grid-cols-4 gap-3 my-5">
+                    {
+                        PLAYERS.map((link) => (
+                            link.position == 'volante' &&
+                            <Player
+                                imageUrl = "/public/img/player/player.jpg"
+                                name = {link.name}
+                                lastName = {link.lastName}
+                                dorsal = {link.dorsal}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+            <div>
+                <h2 class="uppercase text-2xl text-gray-700 font-semibold mt-10">
+                    Delanteros
+                </h2>
+                <div class="grid grid-cols-4 gap-3 my-5">
+                    {
+                        PLAYERS.map((link) => (
+                            link.position == 'delantero' &&
+                            <Player
+                                imageUrl = "/public/img/player/player.jpg"
+                                name = {link.name}
+                                lastName = {link.lastName}
+                                dorsal = {link.dorsal}
+                            />
+                        ))
+                    }
+                </div>
             </div>
         </div>
     </section>

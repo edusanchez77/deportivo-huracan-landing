@@ -3,32 +3,37 @@ import LayoutPages from "@/layouts/LayoutPages.astro";
 ---
 
 <LayoutPages title="Datos">
-    <section>
-        <div class="mb-10">
-            <h2 class="font-bold text-xl my-2">
+    <section class="mb-10 font-dosis">
+        <div>
+            <h2 class="font-bold text-5xl my-2 uppercase">
                 Datos Generales
             </h2>
-            <div>
-                <p>Nombre: Huracán</p>
-                <p>Nombre completo: Club Deportivo Huracán y Biblioteca Popular Tancacha</p>
-                <p>Apodo (s): "el globito" "el globo" "viento blanco"</p>
-                <p>Fundación: 20 de Junio de 1920</p>
-                <p>Presidente: Gerardo Ferragutti</p>
-                <p>Entrenador: Nolberto Mena</p>
+            <div class="text-lg">
+                <p><span class="sub-title">Nombre completo:</span> Club Deportivo Huracán y Biblioteca Popular Tancacha</p>
+                <p><span class="sub-title">Apodo (s):</span> Globo, Globito, Viento Blanco</p>
+                <p><span class="sub-title">Fundación:</span> 20 de Junio de 1920</p>
+                <p><span class="sub-title">Presidente:</span> Ezequiel Vottero</p>
+                <p><span class="sub-title">Entrenador:</span> Edgardo "Chueco" Malvestiti</p>
             </div>
         </div>
 
-        <div class="mb-10">
-            <h2 class="font-bold text-xl my-2">
+        <div class="mt-10">
+            <h2 class="font-bold text-5xl my-2 uppercase">
                 Instalaciones
             </h2>
-            <div>
-                <p>Estadio: Pedro Bartolo Ferrari</p>
-                <p>Ubicación: San Martín 1500</p>
-                <p>Capacidad: 1000 personas</p>
-                <p>Inauguración:1948</p>
-                <p>Otro complejo: Campo de deportes Felipe Girao</p>
+            <div class="text-lg">
+                <p><span class="sub-title">Estadio:</span> Pedro Bartolo Ferrari</p>
+                <p><span class="sub-title">Ubicación:</span> San Martín 1500</p>
+                <p><span class="sub-title">Capacidad:</span> 1000 personas</p>
+                <p><span class="sub-title">Inauguración:</span> 1948</p>
+                <p><span class="sub-title">Otro complejo:</span> Campo de deportes Felipe Girao</p>
             </div>
         </div>
     </section>
 </LayoutPages>
+
+<style>
+    .sub-title{
+        font-weight: 600;
+    }
+</style>

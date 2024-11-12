@@ -4,28 +4,26 @@ import Matchday from "@/components/Matchday.astro"
 ---
 
 <LayoutPages title="Fixture">
-    <section>
-        <div class="mb-10">
-            <h2 class="font-bold text-xl my-2">
-                Fixture 2024
-            </h2>
-            <div>
-                <ul>
-                    <Matchday
-                        local="Huracán"
-                        visitor="9 de Julio"
-                        resLocal="0"
-                        resVisitor="1"
-                    />
+    <section class="mb-10 font-dosis">
+        <h2 class="font-bold text-5xl my-2 uppercase">
+            Fixture 2024
+        </h2>
+        <div>
+            <ul>
+                <Matchday
+                    local="Huracán"
+                    visitor="9 de Julio"
+                    resLocal="0"
+                    resVisitor="1"
+                />
 
-                    <Matchday
-                        local="Atlético Ascasubi"
-                        visitor="Huracán"
-                        resLocal="1"
-                        resVisitor="2"
-                    />
-                </ul>
-            </div>
+                <Matchday
+                    local="Atlético Ascasubi"
+                    visitor="Huracán"
+                    resLocal="1"
+                    resVisitor="2"
+                />
+            </ul>
         </div>
     </section>
 </LayoutPages>
