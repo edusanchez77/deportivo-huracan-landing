@@ -38,39 +38,40 @@ import { TEAMS } from "@/const/teams"
                     </thead>
                     <tbody class="border-[1px] border-gray-300">
                         {
-                            TEAMS.sort((a, b) => ((a.won*3)+a.tied) - ((b.won*3)+b.tied))
-                                .sort((a, b) => ((a.goalsInFavor-a.goalsAgainst) - (b.goalsInFavor-b.goalsAgainst)))
+                            TEAMS
+                                .sort((a, b) => ((b.anual.goalsInFavor-b.anual.goalsAgainst) - (a.anual.goalsInFavor-a.anual.goalsAgainst)))
+                                .sort((a, b) => ((b.anual.won*3)+b.anual.tied) - ((a.anual.won*3)+a.anual.tied))
                                 .map((link, index) => (
                                 <tr>
                                     <td>
                                         {
-                                            index == 2 &&
+                                            index == 13 &&
                                             <p class="border-r-4 border-yellow-400">
                                                 {index+1}
                                             </p>
                                         }
                                         {
-                                            index > 2 &&
+                                            index > 13 &&
                                             <p class="border-r-4 border-red-600">
                                                 {index+1}
                                             </p>
                                         }
                                         {
-                                            index < 2 &&
+                                            index < 13 &&
                                             <p class="border-r-4 border-primary">
                                                 {index+1}
                                             </p>
                                         }
                                     </td>
                                     <td class="text-start uppercase">{link.name}</td>
-                                    <td>{(link.won*3)+(link.tied)}</td>
-                                    <td>{link.games}</td>
-                                    <td>{link.won}</td>
-                                    <td>{link.tied}</td>
-                                    <td>{link.lost}</td>
-                                    <td>{link.goalsInFavor}</td>
-                                    <td>{link.goalsAgainst}</td>
-                                    <td>{link.goalsInFavor - link.goalsAgainst}</td>
+                                    <td>{(link.anual.won*3)+(link.anual.tied)}</td>
+                                    <td>{link.anual.games}</td>
+                                    <td>{link.anual.won}</td>
+                                    <td>{link.anual.tied}</td>
+                                    <td>{link.anual.lost}</td>
+                                    <td>{link.anual.goalsInFavor}</td>
+                                    <td>{link.anual.goalsAgainst}</td>
+                                    <td>{link.anual.goalsInFavor - link.anual.goalsAgainst}</td>
                                 </tr>
                             ))
                         }

@@ -4,6 +4,7 @@ import ArrowDown from "@/icons/arrow-down.astro"
 import Sun from "@/icons/sun.astro"
 import Moon from "@/icons/moon.astro"
 import LogoTienda from "@/icons/logo-tienda.astro"
+import ThemeToggle from "@/components/ThemeToggle.astro"
 ---
 <header id="landing-header" class="z-20 flex items-center justify-between w-full mx-auto px-20 bg-secondary">
     <div class="flex flex-row items-center">
@@ -110,14 +111,22 @@ import LogoTienda from "@/icons/logo-tienda.astro"
                         aria-label=""
                         href="asociate"
                     >
-                        <LogoTienda class="h-7 w-auto text-white transition duration-500 group-hover:scale-150 group-hover:text-secondary/80" />
+                        <LogoTienda class="h-7 w-auto text-white transition duration-700 group-hover:scale-150 group-hover:text-secondary/80" />
                         
                         asociate
                     </a>
                 </li>
+                <li class="ps-6">
+                    <ThemeToggle />
+                </li>
             </ul>
         </nav>
-        <Moon class="text-white h-6 w-auto cursor-pointer" />
+
+            <!-- 
+                <Moon class="dark-mode absolute text-white h-6 w-auto cursor-pointer" />
+                <Sun class="light-mode absolute text-white h-6 w-auto cursor-pointer hidden" />
+            -->
+
     </div>
 </header>
 
@@ -178,3 +187,23 @@ import LogoTienda from "@/icons/logo-tienda.astro"
 
 </style>
 
+<script type="module">
+    const $ = selector => document.querySelector(selector);
+
+    const $darkMode = $('.dark-mode');
+    const $lightMode = $('.light-mode');
+
+    $darkMode.addEventListener('click', darkMode);
+    $lightMode.addEventListener('click', lightMode);
+
+    function darkMode(){
+        $darkMode.classList.add('hidden')
+        $lightMode.classList.remove('hidden')
+    }
+
+    function lightMode(){
+        $lightMode.classList.add('hidden')
+        $darkMode.classList.remove('hidden')
+    }
+
+</script>

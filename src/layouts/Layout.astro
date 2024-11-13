@@ -25,13 +25,19 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ClientRouter />
+    
   </head>
   <body>
-    <slot />
+    
+      <slot />
+    </div>
   </body>
 </html>
 
 <style is:global>  
+
+  
+
   html {
     font-family: "Lexend Variable", system-ui, sans-serif;
     background: #eeeded;
@@ -39,3 +45,5 @@ const { title } = Astro.props;
   }
 
 </style>
+
+

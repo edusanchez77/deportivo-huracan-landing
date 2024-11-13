@@ -38,9 +38,10 @@ import { TEAMS } from "@/const/teams"
                     </thead>
                     <tbody class="border-[1px] border-gray-300">
                         {
-                            TEAMS.sort((a, b) => ((b.won*3)+b.tied) - ((a.won*3)+a.tied))
-                                .sort((a, b) => ((b.goalsInFavor-b.goalsAgainst) - (a.goalsInFavor-a.goalsAgainst)))
-                                .map((link, index) => (
+                            TEAMS
+                                .sort((a, b) => ((b.lastTournament.goalsInFavor-b.lastTournament.goalsAgainst) - (a.lastTournament.goalsInFavor-a.lastTournament.goalsAgainst)))
+                                .sort((a, b) => ((b.lastTournament.won * 3)+b.lastTournament.tied) - ((a.lastTournament.won*3)+a.lastTournament.tied))
+                                .map(({name, shortName, lastTournament, anual}, index) => (
                                 
                                 <tr>
                                     <td>
@@ -51,27 +52,27 @@ import { TEAMS } from "@/const/teams"
                                             </p>
                                         }
                                         {
-                                            index > 0 && index < 3 &&
+                                            index > 0 && index < 7 &&
                                             <p class="border-r-4 border-blue-500">
                                                 {index+1}
                                             </p>
                                         }
                                         {
-                                            index >= 3 &&
+                                            index >= 7 &&
                                             <p class="border-r-4 border-primary">
                                                 {index+1}
                                             </p>
                                         }
                                     </td>
-                                    <td class="text-start uppercase">{link.name}</td>
-                                    <td>{(link.won*3)+(link.tied)}</td>
-                                    <td>{link.games}</td>
-                                    <td>{link.won}</td>
-                                    <td>{link.tied}</td>
-                                    <td>{link.lost}</td>
-                                    <td>{link.goalsInFavor}</td>
-                                    <td>{link.goalsAgainst}</td>
-                                    <td>{link.goalsInFavor - link.goalsAgainst}</td>
+                                    <td class="text-start uppercase">{name}</td>
+                                    <td>{(lastTournament.won*3)+(lastTournament.tied)}</td>
+                                    <td>{lastTournament.games}</td>
+                                    <td>{lastTournament.won}</td>
+                                    <td>{lastTournament.tied}</td>
+                                    <td>{lastTournament.lost}</td>
+                                    <td>{lastTournament.goalsInFavor}</td>
+                                    <td>{lastTournament.goalsAgainst}</td>
+                                    <td>{lastTournament.goalsInFavor - lastTournament.goalsAgainst}</td>
                                 </tr>
                                 
                             ))
@@ -81,11 +82,11 @@ import { TEAMS } from "@/const/teams"
                 </table>
             </div>
             <footer>
-                <p class="mt-6 px-2 border-l-4 border-red-500">
+                <p class="mt-6 px-2 border-l-4 border-green-600">
                     El primero de la tabla clasifica directamente a semifinales.
                 </p>
                 <p class="mt-2 px-2 border-l-4 border-blue-500">
-                    Del puesto 2 al 7 juegan un repechaje a partido único por 3 lugares en las semifinales.
+                    Del puesto 2 al 7 juegan un repechaje a partido único por 3 lugares en las semifinales: 2° vs 7°, 3° vs 6°, 4° vs 5°.
                 </p>
             </footer>
         </div>

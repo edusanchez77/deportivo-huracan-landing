@@ -1,0 +1,15 @@
+---
+import SunIcon from '@/icons/sun.astro'
+import MoonIcon from '@/icons/moon.astro'
+---
+
+<button
+    id="themeToggle"
+    class="inline-flex"
+>
+    <SunIcon class="h-6 w-auto opacity-100 motion-safe:transition-transform dark:-rotate-90 dark:opacity-0" />
+    <MoonIcon class="h-6 w-auto absolute rotate-90 opacity-0 motion-safe:transition-transform dark:rotate-0 dark:opacity-100" />
+
+    <span class="sr-only"></span>
+    
+</button>
